@@ -7,10 +7,13 @@ RUN apk add --no-cache --update wget ca-certificates \
     && tar -zxvf leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz -C / \
     && mkdir -p /leanote/data/public/upload \
     && mkdir -p /leanote/data/files \
+    && mkdir -p /leanote/data/mongodb_backup \
     && rm -r /leanote/public/upload \
+    && rm -r /leanote/mongodb_backup \
     && rm leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
     && ln -s /leanote/data/public/upload /leanote/public/upload \
-    && ln -s /leanote/data/files /leanote/files
+    && ln -s /leanote/data/files /leanote/files \
+    && ln -s /leanote/data/mongodb_backup /leanote/mongodb_backup
 
 RUN echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories \
     && apk add --no-cache --update mongodb-tools@testing
