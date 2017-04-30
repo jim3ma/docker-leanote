@@ -1,10 +1,10 @@
 FROM debian:jessie
 
-ENV LEANOTE_VERSION=2.2.1
+ENV LEANOTE_VERSION=2.4
 
 RUN apt update \
     && apt install -y wget ca-certificates \
-    && wget https://iweb.dl.sourceforge.net/project/leanote-bin/2.2.1/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
+    && wget https://iweb.dl.sourceforge.net/project/leanote-bin/${LEANOTE_VERSION}/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
     && apt remove -y wget \
     && tar -zxvf leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz -C / \
     && mkdir -p /leanote/data/public/upload \

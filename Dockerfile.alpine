@@ -1,9 +1,9 @@
 FROM alpine:3.5
 
-ENV LEANOTE_VERSION=2.2.1
+ENV LEANOTE_VERSION=2.4
 
 RUN apk add --no-cache --update wget ca-certificates \
-    && wget https://iweb.dl.sourceforge.net/project/leanote-bin/2.2.1/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
+    && wget https://iweb.dl.sourceforge.net/project/leanote-bin/${LEANOTE_VERSION}/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
     && tar -zxvf leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz -C / \
     && mkdir -p /leanote/data/public/upload \
     && mkdir -p /leanote/data/files \
@@ -15,8 +15,9 @@ RUN apk add --no-cache --update wget ca-certificates \
     && ln -s /leanote/data/files /leanote/files \
     && ln -s /leanote/data/mongodb_backup /leanote/mongodb_backup
 
-RUN echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories \
-    && apk add --no-cache --update mongodb-tools@testing
+RUN echo '@community http://dl-cdn.alpinelinux.org/alpine/edge/community/' >> /etc/apk/repositories \
+    && echo '@main http://dl-cdn.alpinelinux.org/alpine/edge/main/' >> /etc/apk/repositories \
+    && apk add --no-cache --update libressl2.5-libcrypto@main libressl2.5-libssl@main mongodb-tools@community
 
 VOLUME /leanote/data/
 
