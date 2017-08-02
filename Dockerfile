@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-ENV LEANOTE_VERSION=2.4
+ENV LEANOTE_VERSION=2.5
 
 RUN apt update \
     && apt install -y wget ca-certificates \
