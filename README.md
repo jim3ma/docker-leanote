@@ -5,8 +5,10 @@ More details from this [wiki](https://github.com/leanote/leanote/wiki)
 
 ### Supported tags and respective `Dockerfile` links
 
-* latest, full-featured, full-featured-2.4 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.4/Dockerfile))
-* alpine, alpine-2.4 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.4/Dockerfile.alpine))
+* latest, full-featured, full-featured-2.5 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.5/Dockerfile))
+* alpine, alpine-2.5 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.5/Dockerfile.alpine))
+* full-featured-2.4 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.4/Dockerfile))
+* alpine-2.4 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.4/Dockerfile.alpine))
 * full-featured-2.2.1 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.2.1/Dockerfile))
 * alpine-2.2.1 ([Dockerfile](https://github.com/jim3ma/docker-leanote/blob/2.2.1/Dockerfile.alpine))
 
@@ -60,3 +62,5 @@ services:
 ```
 
 #### 5. docker-compose up -d
+
+
