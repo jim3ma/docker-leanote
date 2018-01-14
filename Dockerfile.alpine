@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.7
 
 ENV LEANOTE_VERSION=2.6
 
@@ -17,7 +17,7 @@ RUN apk add --no-cache --update wget ca-certificates \
 
 RUN echo '@community http://dl-cdn.alpinelinux.org/alpine/edge/community/' >> /etc/apk/repositories \
     && echo '@main http://dl-cdn.alpinelinux.org/alpine/edge/main/' >> /etc/apk/repositories \
-    && apk add --no-cache --update libressl2.5-libcrypto@main libressl2.5-libssl@main mongodb-tools@community
+    && apk add --no-cache --update libressl2.6-libcrypto@main libressl2.6-libssl@main libressl2.6-libtls@main mongodb-tools@community
 
 VOLUME /leanote/data/
 
