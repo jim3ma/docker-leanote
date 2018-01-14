@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV LEANOTE_VERSION=2.5
+ENV LEANOTE_VERSION=2.6
 
 RUN apk add --no-cache --update wget ca-certificates \
     && wget https://iweb.dl.sourceforge.net/project/leanote-bin/${LEANOTE_VERSION}/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz \
