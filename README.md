@@ -1,5 +1,7 @@
 ## Leanote Docker Image
 
+[![Docker Build Status](https://img.shields.io/docker/build/jim3ma/leanote.svg)](https://hub.docker.com/r/jim3ma/leanote/) [![Docker Automated build](https://img.shields.io/docker/automated/jim3ma/leanote.svg)](https://hub.docker.com/r/jim3ma/leanote/) [![Docker Stars](https://img.shields.io/docker/stars/jim3ma/leanote.svg)](https://hub.docker.com/r/jim3ma/leanote/) [![Docker Pulls](https://img.shields.io/docker/pulls/jim3ma/leanote.svg)](https://hub.docker.com/r/jim3ma/leanote/)
+
 All data is in /leanote/data volume. We can mount local data folder for this volume.
 More details from this [wiki](https://github.com/leanote/leanote/wiki)
 
